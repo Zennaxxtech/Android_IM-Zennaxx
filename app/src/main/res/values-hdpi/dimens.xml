@@ -1,0 +1,39 @@
+<resources>
+   
+
+   
+    <dimen name="dimen_app_toolbar_elevation">6dp</dimen>
+    <dimen name="dimen_app_drawer_menu_elevation">16dp</dimen>
+    <dimen name="dimen_app_card_elevation">3dp</dimen>
+    <dimen name="dimen_app_card_radius">3dp</dimen>
+    <dimen name="dimen_app_progress_bar">25dp</dimen>
+    <dimen name="dimen_app_bar_image">230dp</dimen>
+    <dimen name="dimen_app_store_image">180dp</dimen>
+    <dimen name="dimen_app_bar">290dp</dimen>
+    <dimen name="dimen_app_icon_size">50dp</dimen>
+    <dimen name="dimen_app_item_image_size">100dp</dimen>
+    <dimen name="dimen_app_menu_item_margin">32dp</dimen>
+    <dimen name="dimen_horizontal_margin">32dp</dimen>
+    <dimen name="dimen_map_size_large">320dp</dimen>
+    <dimen name="dimen_map_size_small">140dp</dimen>
+    <dimen name="map_paralax_offset">125dp</dimen>
+    <dimen name="activity_vertical_padding">10dp</dimen>
+    <dimen name="activity_horizontal_padding">10dp</dimen>
+    <dimen name="dimen_cart_count">13dp</dimen>
+    <dimen name="dimen_provider_image_size">80dp</dimen>
+    <dimen name="dimen_app_delivery_image">200dp</dimen>
+
+    <!--App text Dimen-->
+    <dimen name="size_app_text_regular">14sp</dimen>
+    <dimen name="size_app_text_medium">16sp</dimen>
+    <dimen name="size_app_text_small">11sp</dimen>
+    <dimen name="size_app_text_large">20sp</dimen>
+    <dimen name="size_app_text_largest">24sp</dimen>
+    <dimen name="size_app_label_regular">13sp</dimen>
+    <dimen name="size_app_label_small">10sp</dimen>
+    <dimen name="size_app_text_cart">9sp</dimen>
+    <dimen name="size_app_button_text">14sp</dimen>
+    <dimen name="line_spacing">2dp</dimen>
+    <dimen name="size_logo">70dp</dimen>
+
+</resources>

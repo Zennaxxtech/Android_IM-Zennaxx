@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context="com.irmsimapp.activity.GroupChatActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvGroupChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="?android:actionBarSize"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/colorWhite"
+        android:dividerHeight="15dp"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <FrameLayout
+        android:id="@+id/flGroupAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_send"
+        android:background="@color/color_bg_attachment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/ivGroupSendVoice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="3dp"
+                app:srcCompat="@drawable/ic_voice" />
+
+            <ImageView
+                android:id="@+id/ivGroupSendImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="3dp"
+                app:srcCompat="@drawable/ic_image" />
+
+            <ImageView
+                android:id="@+id/ivGroupSendCamera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="3dp"
+                app:srcCompat="@drawable/ic_camera" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_send"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.5"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etEnterMsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:hint="@string/enter_message"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/ivAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@color/colorGreen"
+                android:padding="5dp"
+                android:src="@drawable/attachment" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGroupChatSendButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorGreen"
+            android:gravity="center"
+            android:padding="5dp"
+
+            android:text="@string/send"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+</RelativeLayout>

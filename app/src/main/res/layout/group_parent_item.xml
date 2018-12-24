@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/iv_group"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:src="@drawable/default_user_icon" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblListHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGreen"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_transferee_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="TEE : junru.hu" />
+
+        <TextView
+            android:id="@+id/tv_group_latest_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:text="junru.hu" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvGroupMsgCounter"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/bg_round_mic"
+        android:gravity="center"
+        android:maxHeight="35dp"
+        android:maxWidth="35dp"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:layout_margin="4dp"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/colorWhite"
+        tools:text="99+" />
+
+    <LinearLayout
+        android:id="@+id/layout_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvChildIndividualMsgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/down_green_aerrow" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tap_to_green_button_to_start_recording_and_tap_red_button_to_stop_recording"
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <Chronometer
+        android:id="@+id/tvDialogTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="00:00"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp" />
+
+
+    <ImageView
+        android:id="@+id/ivDialogStartAudio"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/audio_play" />
+
+    <ImageView
+        android:id="@+id/ivDialogStopAudio"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/audio_pause"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvDialogSendAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorGreen"
+        android:padding="15dp"
+        android:text="@string/send"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorBlack" />
+</LinearLayout>

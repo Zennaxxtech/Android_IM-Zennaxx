@@ -1,0 +1,262 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.irmsimapp"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.1"
+        resValue "string", "testfairy_app_token", "46e64e8e5582c1b2bb8395946f2a6e410755cb5e"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    flavorDimensions "default"
+    productFlavors {
+        IMApp {
+            dimension "default"
+            applicationId 'com.innoways.IM_ATM_PROD'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "IM App"
+            buildConfigField "String", "BASE_URL", '"https://irms-dev.azurewebsites.net/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://im.asiantigers-mobility.com:5232/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"im.asiantigers-mobility.com"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"im.asiantigers-mobility.com"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '5222'
+            buildConfigField "String", "ENVIROMENT", '"-production_"'
+            buildConfigField "String", "COMPANYNAME", '"atoms"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.im.asiantigers-mobility.com"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"IRMS!api@2189inno7016WAYS#000000"'
+            buildConfigField "String", "AES_API_IV", '"0123456789ABCDEF"'
+
+        }
+        IMApp_demo {
+            dimension "default"
+            applicationId 'com.irmsimapp.demo'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "IM App Demo"
+            buildConfigField "String", "BASE_URL", '"http://erpdemo.i-rms.online/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://58.250.169.98:5232/plugins/restapi/v1/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"58.250.169.98"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"inno1.dyndns.org"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '5222'
+            buildConfigField "String", "ENVIROMENT", '"-demo_"'
+            buildConfigField "String", "COMPANYNAME", '"irms"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.inno1.dyndns.org"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"IRMS!api@2189inno7016WAYS#000000"'
+            buildConfigField "String", "AES_API_IV", '"0123456789ABCDEF"'
+        }
+        IMApp_UAT {
+            dimension "default"
+            applicationId 'com.irmsimapp.uat'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "IM App UAT"
+            buildConfigField "String", "BASE_URL", '"http://atoms.zmallplanet.com/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://58.250.169.98:5232/plugins/restapi/v1/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"58.250.169.98"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"inno1.dyndns.org"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '5222'
+            buildConfigField "String", "ENVIROMENT", '"-uat_"'
+            buildConfigField "String", "COMPANYNAME", '"irms"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.inno1.dyndns.org"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"IRMS!api@2189inno7016WAYS#000000"'
+            buildConfigField "String", "AES_API_IV", '"0123456789ABCDEF"'
+        }
+        IMApp_Dev {
+            dimension "default"
+            applicationId 'com.innoways.IM_dev'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "IM App Dev"
+            buildConfigField "String", "BASE_URL", '"https://irms-dev.azurewebsites.net/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://imdemo.i-rms.online:5232/plugins/restapi/v1/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"40.118.111.50"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"imdemo.i-rms.online"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '5222'
+            buildConfigField "String", "ENVIROMENT", '"-dev_"'
+            buildConfigField "String", "COMPANYNAME", '"irms"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.imdemo.i-rms.online"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"IRMS!api@2189inno7016WAYS#000000"'
+            buildConfigField "String", "AES_API_IV", '"0123456789ABCDEF"'
+        }
+        IMApp_Innoways {
+            dimension "default"
+            applicationId 'com.innoways.innoways_IM_production'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "IM App Innoways"
+            buildConfigField "String", "BASE_URL", '"https://erp.innoways.com/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://im.innoways.com:5232/plugins/restapi/v1/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"im.innoways.com"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"im.innoways.com"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '80'
+            buildConfigField "String", "ENVIROMENT", '"-production_"'
+            buildConfigField "String", "COMPANYNAME", '"innoways"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.im.innoways.com"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"IRMS!api@2189inno7016WAYS#000000"'
+            buildConfigField "String", "AES_API_IV", '"0123456789ABCDEF"'
+        }
+
+        IMApp_Oceanpark_UAT {
+            dimension "default"
+            applicationId 'com.oceanpark.im.uat'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "DEDMessenger"
+            buildConfigField "String", "BASE_URL", '"https://irms-dev.azurewebsites.net/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://58.250.169.98:5232/plugins/restapi/v1/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"58.250.169.98"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"inno1.dyndns.org"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '5222'
+            buildConfigField "String", "ENVIROMENT", '"-uat_"'
+            buildConfigField "String", "COMPANYNAME", '"oceanpark"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.inno1.dyndns.org"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"innoways21897016innoways21897016"'
+            buildConfigField "String", "AES_API_IV", '"6107982121897016"'
+        }
+
+        IMApp_Oceanpark {
+            dimension "default"
+            applicationId 'com.oceanpark.im'
+            versionName '1.0.0'
+            versionCode 1
+            resValue "string", "app_name", "IM App Oceanpark UAT"
+            buildConfigField "String", "BASE_URL", '"https://irms-dev.azurewebsites.net/API/"'
+            buildConfigField "String", "BASE_URL_OPENFIRE", '"http://58.250.169.98:5232/plugins/restapi/v1/"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_KEY", '"irms21897016"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_RESOURCE", '"Android"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_IP", '"58.250.169.98"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_PORT", '5232'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_SERVICE", '"inno1.dyndns.org"'
+            buildConfigField "int", "OPENFIRE_HOST_SERVER_CHAT_PORT", '5222'
+            buildConfigField "String", "ENVIROMENT", '"-production__"'
+            buildConfigField "String", "COMPANYNAME", '"oceanpark"'
+            buildConfigField "String", "APPSTYPE", '"IM"'
+            buildConfigField "String", "OPENFIRE_HOST_SERVER_CONFERENCE_SERVICE", '"conference.inno1.dyndns.org"'
+            buildConfigField "String", "UPDATE_APK_URL", '""'
+            buildConfigField "String", "AES_API_KEY", '"innoways21897016innoways21897016"'
+            buildConfigField "String", "AES_API_IV", '"6107982121897016"'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+ext {
+    // App dependencies version set here....
+
+    supportLibraryVersion = '28.0.0'
+    testRunnerVersion = '1.0.1'
+    junitVersion = '4.12'
+    espressoVersion = '3.0.1'
+    picassoVersion = '2.5.2'
+    xmppVersion = '0.5.0'
+    testFairyVersion = '1.7.4@aar'
+    smackVersion = '4.2.4'
+    gsonVersion = '2.8.2'
+    retrofitVersion = '2.3.0'
+    retrofitGsonVersion = '2.3.0'
+    loggingInterceptorVersion = '3.9.0'
+    apacheLang3Version = '3.7'
+    roomVersion = '1.1.1'
+    rxJava = '2.1.9'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+    implementation "org.jxmpp:jxmpp-jid:$xmppVersion"
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "testfairy:testfairy-android-sdk:$testFairyVersion"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitGsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "org.apache.commons:commons-lang3:$apacheLang3Version"
+    implementation "org.igniterealtime.smack:smack-android-extensions:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-tcp:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-im:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-extensions:$smackVersion"
+    implementation 'me.leolin:ShortcutBadger:1.1.19@aar'
+    implementation 'me.pushy:sdk:1.0.39'
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
+    implementation "android.arch.lifecycle:extensions:$roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'android.arch.paging:runtime:1.0.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'org.bouncycastle:bcprov-jdk16:1.45'
+    implementation "org.igniterealtime.smack:smack-sasl-provided:$smackVersion"
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.9.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.9.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.0'
+
+}
+configurations {
+    all*.exclude group: 'xpp3', module: 'xpp3'
+}

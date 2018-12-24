@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/recycler_section_header_height">
+
+    <TextView
+        android:id="@+id/list_item_section_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_sticky_date"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text=" 18 September 2017 "
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@android:color/black" />
+</RelativeLayout>
+
